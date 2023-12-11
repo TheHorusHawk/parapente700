@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parapente 700</title>
+    <meta name="description" content="Website for folk band Parapente700.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/form.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg pb-0 pt-0">
+            <h2 class="visually-hidden">Top level navigation menu</h2>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img id="small-logo" src="/img/logo.png"
+                        alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="nav navbar-nav d-flex">
+                        <li class="nav-item d-flex justify-content-end"><a class="nav-link fs-2" href="./index.html">Home</a></li>
+                        <li class="nav-item d-flex justify-content-end"><a class="nav-link fs-2" href="./about.html">About</a></li>
+                        <li class="nav-item d-flex justify-content-end"><a class="nav-link fs-2" href="./tour.html">Tour</a></li>
+                        <li class="nav-item d-flex justify-content-end"><a class="nav-link fs-2" href="#" aria-current="page">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <body>
+    <div id="Contact" class="container-xl">
+        <h2 class="mb-3">Leave us a message and subscribe to our newsletter</h2>
+        <p>If you want to get in touch, please fill in your email and message below. If you'd like to be informed of the latest news on our upcoming concerts and albums, please join our mailing list.</p>
+        <form id="contact-form" name="contact">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <label for="firstName" class="form-label">First Name: </label><input type="text" id="firstName"
+                        name="firstName" class="form-control" aria-describedby="firstnameHelp" />
+                    <div id="firstNameHelp" class="form-text visually-hidden">Please type in your first name</div>
+                </div>
+                <div class="col-6 col-md-4 mb-3">
+                    <label for="surname" class="form-label">Surname: </label><input type="text" id="surname" name="surname"
+                        class="form-control" aria-describedby="surnameHelp" />
+                    <div id="surnameHelp" class="form-text visually-hidden">Please type in your surname</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="email" class="form-label">Your Email:</label><input type="email" id="email" name="email"
+                        class="form-control" aria-describedby="emailHelp" />
+                    <div id="emailHelp" class="form-text visually-hidden">Please type in your email</div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="message" class="form-label">Message: </label>
+                    <textarea class="form-control" id="message" name="message" aria-describedby="messageHelp"></textarea>
+                    <div id="messageHelp" class="form-text">Please type in your message</div>
+                </div>
+            </div>
+            <div class="form-check mb-3">
+                    <input class="form-check-input" name="mailing_list" type="checkbox" checked value="subscribe" id="mailinglistCheck">
+                    <label class="form-check-label" for="mailinglistCheck">
+                        I'd like to be added to the mailing list
+                    </label>
+            </div>
+            <div class="col">
+                <button class="form_submit btn btn-dark" id='form_submit' type="submit">Send</button>
+            </div>
+            </div>
+        </form>
+    </div>
+    <!-- Email error modal (hidden unless error in email) -->
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="emailModalLabel">Email address error</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please type in a valid email address.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Message/Mailing list error modal (hidden unless either no message or no subscription on submission) -->
+    <div class="modal fade" id="msgModal" tabindex="-1" aria-labelledby="msgModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="msgModalLabel">Message or Mailing List error</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please type in a message or tick the box to subscribe to our newsletter.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Form confirmation modal (hidden unless form is submitted) -->
+    <div class="modal fade" id="submittedModal" tabindex="-1" aria-labelledby="submittedModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="submittedModalLabel">Form submitted!</h1>
+                    <button type="button" class="btn-close" id="submitCloseButton" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Form was submitted successfully!</p>
+                    <p id="modalText"></p>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="row container">
+        <p class="text-start p-2">&copy <span id="copyright"></span> - Bruno Teles</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./static/footer.js"></script>
+    <script src="./static/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parapente 700</title>
+        <meta name="description" content="Website for folk band Parapente700.">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="./static/style.css">
+        <link rel="stylesheet" href="./static/home.css">
+    </head>
+    <body class="m-0 p-0">
+        <header>
+            <nav class="navbar navbar-expand-lg pb-0 pt-0">
+                <h2 class="visually-hidden">Top level navigation menu</h2>
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img id="small-logo" src="/img/logo.png"
+                            alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="nav navbar-nav d-flex">
+                            <li class="nav-item d-flex justify-content-end"><a class="nav-link fs-2" href="#" aria-current="page">Home</a></li>
+                            <li class="nav-item d-flex justify-content-end"><a class="nav-link fs-2" href="./about.html">About</a></li>
+                            <li class="nav-item d-flex justify-content-end"><a class="nav-link fs-2" href="./tour.html">Tour</a></li>
+                            <li class="nav-item d-flex justify-content-end"><a class="nav-link fs-2" href="./contact.html">Contact</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="row m-0 p-0">
+                    <div class="position-absolute z-3" id="title">
+                    <a href="./about.html">
+                        <h1>Parapente 700</h1>
+                    </a>
+                </div>
+                <div id="hero" class="carousel slide m-0 p-0">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#hero" data-bs-slide-to="0" class="active" aria-current="true"
+                            aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#hero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#hero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner m-0 p-0">
+                        <div class="carousel-item active">
+                            <img src="./img/parapente700-1.jpg" class="d-block w-100" alt="Man with violin and woman with accordion on swings">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/parapente700-4.jpg" class="d-block w-100"
+                                alt="Man with violin and woman with accordion very open above her, sitting facing away from camera.">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/parapente700-3.jpg" class="d-block w-100"
+                                alt="Man with violin looking at woman playing the accordion with her eyes shut">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./static/code.js"></script>
+    </body>
+</html>

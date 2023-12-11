@@ -1,0 +1,14 @@
+.form-text {
+    margin-top: .25rem;
+    font-size: .875em;
+    color: rgb(169, 145, 90);
+}
+
+.form-check {
+    display: inline-block;
+}
+
+.modal-content {
+    color: inherit;
+    background-color: var(--background);
+}

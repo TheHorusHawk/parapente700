@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #d5b263;
+    --background: #293040;
+    --carousel-height: 70vh
+}
+
+.navbar {
+    --bs-navbar-color: #d5b263;
+    min-height: 30vh;
+    border-bottom: 1px solid black;
+    color: var(--text);
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28169, 145, 90, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .nav {
+    --bs-nav-link-hover-color: #a9915a;
+}
+
+.nav-item {
+    padding: 0px 12px 0px;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+#title {
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    height: 30vh;
+}
+
+#small-logo {
+    height: 30vh;
+}
+
+@media (max-width: 990px) {
+    #small-logo {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 300px) {
+    #small-logo {
+        height: 15vh;
+    }
+}
+@media (max-width: 250px) {
+    #small-logo {
+        height: 10vh;
+    }
+}
+
+#hero .carousel-item::before {
+    content: "";
+    background-image: 
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.5),
+        transparent);
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 60vh;
+    height: var(--carousel-height);
+}
+
+h3, li, p {
+    text-align: center;
+}
+.carousel-inner {
+    max-height: var(--carousel-height);
+}
+
+#hero .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    max-height:100vh;
+    overflow: hidden;
+}
+
+@media (max-width: 400px) {
+    #hero .carousel-item img {
+        object-fit: center;
+        object-position: center;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+}
+
+@media (max-width: 990px) {
+    iframe {
+            width: 100%;
+    }
+}
+
+.iframe-wrapper {
+    text-align: center;
+}
+
+.list-group-item {
+    color:inherit;
+    background-color: inherit;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
