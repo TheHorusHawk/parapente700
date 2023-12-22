@@ -8,7 +8,7 @@ const borderStyleFail = '5px solid red';
 const reEmail = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/
 
 
-//Fucntion adds the two functions to the appropriate events - when form is submitted and when button is clicked
+//Function adds the two functions to the appropriate events - when form is submitted and when button is clicked
 document.addEventListener('DOMContentLoaded', event => {
     const submit_button = document.getElementById('form_submit');
     submit_button.addEventListener('click', validation)
@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', event => {
 function validation (event) {
     //form validation - Requires valid email and
     //either being added to mailing list or sending a message
-    
     //gets necessary fields for validation
-    const email = document.getElementById('name');
+
+    const email = document.getElementById('email');
     const mailinglistCheck = document.getElementById('mailinglistCheck')
     const message = document.getElementById('message')
 
@@ -46,7 +46,7 @@ function validation (event) {
     }
 
     //boolean keeps track of validation, initialized as true
-    blnValidated = true;
+    let blnValidated = true;
 
     //verifies there's an email, warns otherwise
     if (!email.value) {
@@ -100,5 +100,6 @@ function submission(event) {
     //resets form and modal text
     event.target.reset();
     let closeButton = document.getElementById('submitCloseButton')
-    closeButton.addEventListener('click',()=> text.innerHTML = '')
+    closeButton.addEventListener('click',() => text.innerHTML = '')
+
 }
